@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159411627-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159411627-1');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Contact | Divine Packaging</title>
+    <link rel="icon" type="image/png" href="assets/img/logodivine.png">
+</head>
+
+     
+     <div class="navbar">
+       <div class="message-container">
+           <div class="message">Get 15% Discount on First Order</div>
+           
+       </div>
+   </div>
+<body id="contact-body" style="overflow-x: hidden;">
+
+    <nav class="navbar1">
+        <div class="logo">
+          <a href="index.html">
+          <img src="assets/img/logodivine.png" alt="Logo">
+        </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a  style="color: rgb(29, 126, 29);" target="_blank" href="https://wa.me/message/RIPTOYJXXSHNE1"><i class="fab fa-whatsapp">Chat Now</i></a></li>
+            <li><a style="color: black;" href="about.html">About</a></li>
+            <li><a style="color: black;" href="index.html">Home</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+        
+
+        <div class="animated fadeIn row" style="width:100vw;animation-duration: 1.5s;">
+            <div class="col-md-6" id="left-hero">
+                <h1 class="hero-tag contact-hero animated fadeInLeft">Get A Free Quote</h1>
+                <p class="hero-des contact-des animated fadeIn delay-1s">Interested in a quote? Please complete the form below, and we'll respond promptly.
+                     Or write us an email <a href="mailto:sales@divinepackaging.com"><i
+                            class="fas fa-envelope"></i></a>
+                </p>
+                <form id="contact-form" class="input-container" action="process.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+
+                    <!-- Add Quantity Input Field -->
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" name="quantity" id="quantity" class="form-control" required min="100">
+                    </div>
+                    
+                    <div style="margin-top: 40px;"></div>
+
+                    <!-- Add Box Type Dropdown -->
+                    <div class="form-group">
+                        <label for="box-type">Box Type</label>
+                        <select name="box-type" id="box-type" class="form-control" required>
+                            <option value="Option 0"></option>
+                            <option value="Option 1">Craft Boxes</option>
+                            <option value="Option 2">Bleach Boxes</option>
+                            <option value="Option 3">Food Boxes</option>
+                            <option value="Option 1">Skin Care Boxes</option>
+                            <option value="Option 2">E-Commerce Boxes</option>
+                            <option value="Option 3">Special Customized Boxes</option>
+                            <option value="Option 1">Plastic Bags</option>
+                            <option value="Option 2">Paper Bags</option>
+                            <option value="Option 3">Stickers</option>
+                            <option value="Option 1">Visiting Cards</option>
+                            <option value="Option 2">Customized Tags</option>
+                            <option value="Option 3">Customized Cups</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    <div style="margin-top: 40px;"></div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea rows="3" id="message" name="message" class="form-control" required></textarea>
+                        <button type="submit" class="submit animated bounce delay-4s learn-btn">Send Message</button>
+                </form>
+
+                <div id="response_message" style="display:none;"></div>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const form = document.getElementById("contact-form");
+                        const responseMessage = document.getElementById("response_message");
+                
+                        form.addEventListener("submit", function (e) {
+                            e.preventDefault();
+                
+                            fetch("process.php", {
+                                method: "POST",
+                                body: new FormData(form),
+                            })
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    responseMessage.textContent = data;
+                                    responseMessage.style.display = "block";
+                                })
+                                .catch((error) => {
+                                    responseMessage.textContent = "Error sending email.";
+                                    responseMessage.style.display = "block";
+                                });
+                        });
+                    });
+                </script>
+                
+                <br>
+                <!-- <div class="feedback"><a href="https://d474b570.nolt.io/">Have any feedback or suggestion?</a></div> -->
+
+            </div>
+
+            <div class="col-md-6" id="hero-right">
+                <!-- <img class="animated fadeInRight" id="hero-img" src="assets/img/contact.svg">
+            </div> -->
+
+        </div>
+
+        <div class="footer-full animated fadeIn delay-2s">
+            <div class="social-icons">
+                <a target="_blank" href="mailto:sales@divinepackaging.com"><i class="fas fa-envelope"></i></a>
+                <a target="_blank" href="https://instagram.com/divinepackaging_?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=61550824767012&mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://wa.me/7463154874"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+
+</html>

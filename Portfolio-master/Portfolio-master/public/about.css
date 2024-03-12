@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: orangered;
+    /* Orangered background color */
+    color: #fff;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .message-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .message {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: orangered;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    margin: 0 10px;
+    transition: transform 0.1s ease-in-out;
+    margin-top: -1vh;
+  }
+
+  .navbar:hover .message {
+    animation: vibrate 0.5s infinite;
+  }
+
+  @keyframes vibrate {
+    0% {
+      transform: translateY(-2px);
+      /* Move messages 2px above the center */
+    }
+
+    25% {
+      transform: translateY(2px);
+    }
+
+    50% {
+      transform: translateY(-2px);
+    }
+
+    75% {
+      transform: translateY(2px);
+    }
+
+    100% {
+      transform: translateY(-2px);
+    }
+  }
+
+        /* Centered container */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px); /* Adjust 60px to match your navbar height */
+            text-align: center;
+        }
+
+        .centered-content {
+            max-width: 80%;
+            padding: 20px;
+        }
+
+        .centered-text {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+   /* Add this to styles.css */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 186, 160);
+    overflow: hidden;
+}
+.card-body {
+  /* Ensure text wraps within the card body */
+  word-wrap: break-word;
+}
+
+.card-img-top {
+    max-width: 100%;
+    padding: 10px;
+    margin: 0;
+    max-height: 200px; /* Adjust the value as needed */
+    overflow-y: auto; /* Add vertical scroll when needed */
+}
+.card-text
+{
+  margin-bottom: 10px;
+  font-size: 13px;
+  
+}
+.card-title h3
+{
+  font-size: 17px;
+  
+}
+
+.card-img-left{
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Adjust column layout for smaller screens */
+    .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+/* Base styles for large screens (greater than or equal to 992px) */
+.container.rect {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-lg-6 {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  /* Medium screens (between 768px and 991px) */
+  @media (max-width: 991px) {
+    .col-lg-6 {
+      width: 100%;
+    }
+    .box_icon{
+      width: 60%;
+    }
+  
+    
+  }
+  
+  /* Small screens (less than 768px) */
+  @media (max-width: 767px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-lg-6 {
+      width: 100%;
+    }
+  
+    /* Adjust styles for the box icons and titles */
+    .box_icon {
+      margin-bottom: 10px;
+    }
+  
+    .box_icon img {
+      max-width: 100%; /* Ensure images don't exceed their container width */
+      width: 50%; /* Adjust the width to your desired size (e.g., 50% for 50% of the container width) */
+    }
+  
+    /* Center-align the icon images */
+    .text-left {
+      text-align: center;
+    }
+  
+    .box_title {
+      text-align: center;
+    }
+    
+  }
+  
+  /* Small screens (less than 768px) */
+@media (max-width: 767px) {
+    .col-md-4 {
+      width: 50%;
+    }
+  }
+  
+  /* Extra-small screens (less than 576px) */
+  @media (max-width: 575px) {
+    .col-md-4 {
+      width: 100%;
+    }
+    
+  }
+  
+ 
+
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}  
+
+
+div {
+    display: block;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
